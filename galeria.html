@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Galeria | Folclore Brasileiro</title>
+
+<style>
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: #0b1715;
+  color: #f5f5ed;
+  font-family: Arial, sans-serif;
+}
+
+header {
+  padding: 25px 7%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.logo {
+  color: #baff65;
+  font-size: 23px;
+  font-weight: bold;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin-right: 16px;
+  font-size: 14px;
+}
+
+nav a:hover { color: #baff65; }
+
+.intro {
+  padding: 75px 8% 40px;
+  text-align: center;
+}
+
+.tag {
+  color: #baff65;
+  letter-spacing: 3px;
+  font-size: 12px;
+}
+
+h1 {
+  font-size: clamp(42px, 8vw, 80px);
+  margin: 20px 0;
+  letter-spacing: -2px;
+}
+
+h1 span { color: #baff65; }
+
+.intro p {
+  color: #b8c8c0;
+  line-height: 1.7;
+}
+
+.galeria {
+  max-width: 1200px;
+  margin: auto;
+  padding: 30px 7% 90px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 25px;
+}
+
+.card {
+  background: #172923;
+  border: 1px solid #30453a;
+  border-radius: 24px;
+  overflow: hidden;
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+}
+
+.card img {
+  width: 100%;
+  height: 340px;
+  object-fit: cover;
+  display: block;
+}
+
+.conteudo {
+  padding: 25px;
+}
+
+.numero {
+  color: #baff65;
+  font-size: 13px;
+  letter-spacing: 2px;
+}
+
+h2 {
+  font-size: 28px;
+  margin: 12px 0;
+}
+
+.conteudo p {
+  color: #b8c8c0;
+  line-height: 1.7;
+  font-size: 15px;
+}
+
+footer {
+  text-align: center;
+  padding: 30px;
+  color: #8ea49a;
+}
+
+@media (max-width: 650px) {
+  .galeria {
+    grid-template-columns: 1fr;
+  }
+
+  .card img {
+    height: 300px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="logo">✦ RAÍZES</div>
+  <nav>
+    <a href="index.html">Início</a>
+    <a href="galeria.html">Galeria</a>
+    <a href="formulario.html">Contato</a>
+  </nav>
+</header>
+
+<section class="intro">
+  <div class="tag">MITOS E LENDAS</div>
+  <h1>Seres do <span>Folclore.</span></h1>
+  <p>
+    Conheça os personagens que fazem parte
+    das histórias e tradições brasileiras.
+  </p>
+</section>
+
+<section class="galeria">
+
+  <article class="card">
+    <img src="saci.jpg" alt="Saci-Pererê">
+    <div class="conteudo">
+      <div class="numero">PERSONAGEM 01</div>
+      <h2>Saci-Pererê</h2>
+      <p>
+        Travesso e cheio de mistérios, o Saci
+        é conhecido por sua única perna,
+        gorro vermelho e redemoinhos.
+        Adora pregar peças nas pessoas.
+      </p>
+    </div>
+  </article>
+
+  <article class="card">
+    <img src="curupira.jpg" alt="Curupira">
+    <div class="conteudo">
+      <div class="numero">PERSONAGEM 02</div>
+      <h2>Curupira</h2>
+      <p>
+        Guardião das florestas, possui cabelos
+        vermelhos e pés virados para trás.
+        Protege os animais e a natureza
+        contra aqueles que causam destruição.
+      </p>
+    </div>
+  </article>
+
+  <article class="card">
+    <img src="mula.jpg" alt="Mula sem Cabeça">
+    <div class="conteudo">
+      <div class="numero">PERSONAGEM 03</div>
+      <h2>Mula sem Cabeça</h2>
+      <p>
+        Uma criatura misteriosa que,
+        segundo a lenda, aparece durante
+        a noite, galopando e soltando
+        chamas pelo pescoço.
+      </p>
+    </div>
+  </article>
+
+  <article class="card">
+    <img src="iara.jpg" alt="Iara">
+    <div class="conteudo">
+      <div class="numero">PERSONAGEM 04</div>
+      <h2>Iara</h2>
+      <p>
+        Conhecida como a mãe das águas,
+        Iara é uma sereia encantadora
+        que vive nos rios e atrai
+        pessoas com seu canto misterioso.
+      </p>
+    </div>
+  </article>
+
+</section>
+
+<footer>
+  RAÍZES ©️ 2026 • Folclore Brasileiro
+</footer>
+
+</body>
+</html>

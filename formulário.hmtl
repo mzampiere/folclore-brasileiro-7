@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contato | Folclore Brasileiro</title>
+
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #0b1715;
+  color: #f5f5ed;
+  font-family: Arial, sans-serif;
+}
+
+header {
+  padding: 25px 7%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.logo {
+  color: #baff65;
+  font-size: 23px;
+  font-weight: bold;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin-right: 16px;
+  font-size: 14px;
+}
+
+nav a:hover {
+  color: #baff65;
+}
+
+.intro {
+  text-align: center;
+  padding: 70px 8% 35px;
+}
+
+.tag {
+  color: #baff65;
+  letter-spacing: 3px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+h1 {
+  font-size: clamp(42px, 8vw, 75px);
+  letter-spacing: -2px;
+  margin: 20px 0;
+}
+
+h1 span {
+  color: #baff65;
+}
+
+.intro p {
+  color: #b8c8c0;
+  line-height: 1.7;
+  font-size: 17px;
+}
+
+.formulario {
+  max-width: 650px;
+  margin: 20px auto 90px;
+  padding: 35px;
+  background: #172923;
+  border: 1px solid #30453a;
+  border-radius: 25px;
+}
+
+label {
+  display: block;
+  margin: 20px 0 9px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+input, select, textarea {
+  width: 100%;
+  padding: 16px;
+  border-radius: 12px;
+  border: 1px solid #40574a;
+  background: #0b1715;
+  color: white;
+  font-size: 15px;
+  font-family: Arial, sans-serif;
+}
+
+input:focus, select:focus,
+textarea:focus {
+  outline: 2px solid #baff65;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 130px;
+}
+
+button {
+  width: 100%;
+  padding: 17px;
+  margin-top: 25px;
+  border: none;
+  border-radius: 30px;
+  background: #baff65;
+  color: #102018;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: #d5ff9e;
+  transform: translateY(-3px);
+}
+
+#resultado {
+  margin-top: 20px;
+  color: #baff65;
+  text-align: center;
+  line-height: 1.6;
+}
+
+footer {
+  text-align: center;
+  padding: 30px;
+  color: #8ea49a;
+  font-size: 13px;
+}
+
+@media (max-width: 700px) {
+  .formulario {
+    margin: 20px 5% 70px;
+    padding: 25px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="logo">✦ RAÍZES</div>
+  <nav>
+    <a href="index.html">Início</a>
+    <a href="galeria.html">Galeria</a>
+    <a href="formulario.html">Contato</a>
+  </nav>
+</header>
+
+<section class="intro">
+  <div class="tag">FALE COM A GENTE</div>
+
+  <h1>Sua voz faz parte <br>
+    da nossa <span>história.</span>
+  </h1>
+
+  <p>
+    Qual lenda brasileira mais desperta
+    sua curiosidade? Compartilhe sua opinião!
+  </p>
+</section>
+
+<section class="formulario">
+
+  <form id="contato">
+
+    <label for="nome">Seu nome</label>
+    <input
+      type="text"
+      id="nome"
+      placeholder="Digite seu nome"
+      required
+    >
+
+    <label for="email">Seu e-mail</label>
+    <input
+      type="email"
+      id="email"
+      placeholder="exemplo@email.com"
+      required
+    >
+
+    <label for="personagem">
+      Seu personagem favorito
+    </label>
+
+    <select id="personagem" required>
+      <option value="">
+        Selecione um personagem
+      </option>
+      <option>Saci-Pererê</option>
+      <option>Curupira</option>
+      <option>Mula sem Cabeça</option>
+      <option>Iara</option>
+      <option>Outro personagem</option>
+    </select>
+
+    <label for="mensagem">
+      Deixe sua mensagem
+    </label>
+
+    <textarea
+      id="mensagem"
+      placeholder="Conte o que você acha do folclore brasileiro..."
+      required
+    ></textarea>
+
+    <button type="submit">
+      Enviar mensagem →
+    </button>
+
+    <p id="resultado" role="status"></p>
+
+  </form>
+
+</section>
+
+<footer>
+  RAÍZES ©️ 2026 • Folclore Brasileiro
+</footer>
+
+<script>
+document.getElementById("contato")
+.addEventListener("submit", function(event) {
+  event.preventDefault();
+
+  const nome = document.getElementById("nome").value;
+  const personagem = document.getElementById("personagem").value;
+
+  document.getElementById("resultado").textContent =
+    "Obrigado, " + nome +
+    "! Sua participação sobre " + personagem +
+    " foi registrada nesta página.";
+
+  this.reset();
+});
+</script>
+
+</body>
+</html>
